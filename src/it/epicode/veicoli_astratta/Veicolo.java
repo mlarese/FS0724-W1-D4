@@ -1,8 +1,20 @@
-package it.epicode.veicoli;
+package it.epicode.veicoli_astratta;
 
-public class Veicolo {
+import it.epicode.veicoli.TipoVeicolo;
+
+public abstract class Veicolo implements  IDisponibile{
     private String targa;
     private double prezzo;
+
+    @Override
+    public void checkDisponibilita() {
+        System.out.println("Veicolo non disponibile");
+    }
+
+    @Override
+    public String caratteristiche() {
+        return "targa: " + getTarga() + " costo: " + calcolaCosto() ;
+    }
 
     private TipoVeicolo categoria ;
 
@@ -27,4 +39,6 @@ public class Veicolo {
         this.prezzo = prezzo;
         this.categoria = categoria;
     }
+
+    public abstract double calcolaCosto() ;
 }

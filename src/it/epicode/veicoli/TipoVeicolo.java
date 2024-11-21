@@ -1,2 +1,5 @@
-package it.epicode.veicoli;public enum TipiVeicolo {
+package it.epicode.veicoli;
+
+public enum TipoVeicolo {
+    AUTO, MOTO, CAMION
 }
